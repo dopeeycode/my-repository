@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk as SpaceGrotesk } from 'next/font/google'
+import { Plus_Jakarta_Sans as PlusJakarta } from 'next/font/google'
 import './globals.css'
 
-const spaceGrotesk = SpaceGrotesk({ subsets: ['latin'] })
+const plusJakartaFont = PlusJakarta({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
@@ -19,8 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={spaceGrotesk.className}>
-        <main className="antialiased text-zinc-50">{children}</main>
+      <body className={plusJakartaFont.className}>
+        <main className="antialiased w-full h-screen bg-brand-neutrais text-washed-blue-50">
+          {children}
+        </main>
       </body>
     </html>
   )
